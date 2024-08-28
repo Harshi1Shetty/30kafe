@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Farmer Profile Details</h2>
+    
+    <form>
+        <label for="farmer-name">Name of Farmer:</label>
+        <input type="text" id="farmer-name" name="farmer-name" required>
+
+        <label for="farmer-contact">Contact Number:</label>
+        <input type="tel" id="farmer-contact" name="farmer-contact" required>
+
+        <label for="farmer-email">Email:</label>
+        <input type="email" id="farmer-email" name="farmer-email" required>
+
+        <label for="farm-tools">Farming Tools Available:</label>
+        <textarea id="farm-tools" name="farm-tools" rows="4" placeholder="List the farming tools available..."></textarea>
+
+        <label for="crop-first-part">Crop Grown in the First Part of the Year:</label>
+        <input type="text" id="crop-first-part" name="crop-first-part" required>
+
+        <label for="crop-second-part">Crop Grown in the Second Part of the Year:</label>
+        <input type="text" id="crop-second-part" name="crop-second-part" required>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

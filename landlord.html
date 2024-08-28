@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord Profile Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="file"] {
+            padding: 5px;
+        }
+        .pdf-upload-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .pdf-upload-container label {
+            flex: 1;
+        }
+        .pdf-upload-container input[type="file"] {
+            flex: 2;
+            margin-right: 10px;
+        }
+        .submit-button {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+        .activity-tab {
+            margin-top: 30px;
+        }
+        .activity-tab h3 {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Landlord Profile Details</h2>
+    
+    <form>
+        <label for="name">Name of Landlord:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="contact">Contact Number:</label>
+        <input type="tel" id="contact" name="contact" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <div class="pdf-upload-container">
+            <label for="pdf-upload">Upload Ownership Papers (PDF):</label>
+            <input type="file" id="pdf-upload" name="pdf-upload" accept="application/pdf" required>
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+
+        <div class="photo-upload-container">
+            <label for="photo-upload">Upload Photos of Land (4 angles):</label>
+            <input type="file" id="photo-upload" name="photo-upload" accept="image/*" multiple required>
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+
+        <label for="land-area">Area of Land (in sq. feet):</label>
+        <input type="number" id="land-area" name="land-area" required>
+
+        <div class="activity-tab">
+            <h3>Activity of Land (Past 5 Years)</h3>
+
+            <label for="crop-growth">Crop Growth Activity:</label>
+            <textarea id="crop-growth" name="crop-growth" rows="4" placeholder="Describe crop growth activity for the past 5 years..."></textarea>
+
+            <label for="weather">Weather Details (Past 5 Years):</label>
+            <textarea id="weather" name="weather" rows="4" placeholder="Describe weather conditions for the past 5 years..."></textarea>
+
+            <label for="soil-moisture">Soil Moisture Content:</label>
+            <input type="number" step="0.01" id="soil-moisture" name="soil-moisture" placeholder="Enter soil moisture content (in float)">
+
+            <label for="soil-chemical">Soil Chemical Content:</label>
+            <input type="number" step="0.01" id="nitrogen" name="nitrogen" placeholder="Enter nitrogen content (in float)">
+            <input type="number" step="0.01" id="phosphorous" name="phosphorous" placeholder="Enter phosphorus content (in float)">
+
+            <label for="altitude">Altitude (in feet):</label>
+            <input type="number" id="altitude" name="altitude" required>
+        </div>
+
+          <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
